@@ -14,7 +14,7 @@ else:
     quote_plus = urllib.parse.quote_plus
     translatePath = xbmcvfs.translatePath
 
-AddonID ='script.ezmaintenanceplus'
+AddonID ='script.setup'
 USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
 selfAddon    = xbmcaddon.Addon(id=AddonID)
 
@@ -46,7 +46,7 @@ backup_zip       =  translatePath(os.path.join(backupdir,'backup_addon_data.zip'
 dialog = xbmcgui.Dialog()
 progressDialog = xbmcgui.DialogProgress()
 
-AddonTitle = "EZ Maintenance+"
+AddonTitle ="KOVI Setup"
 EXCLUDES         = [AddonID, 'backupdir','backup.zip','script.module.requests','script.module.urllib3','script.module.chardet','script.module.idna','script.module.certifi']
 EXCLUDES_ADDONS  = ['notification','packages']
 
@@ -268,7 +268,7 @@ if action   == None: CATEGORIES()
 elif action == 'settings': control.openSettings()
 
 elif action == 'fresh_start':
-    dialog.ok(AddonTitle,'Before Proceeding please switch skin to the default Kodi... Confluence or Estuary...')
+    dialog.ok(AddonTitle,'Before Proceeding please switch skin to the default Kodi... KOVI or Estuary...')
     from resources.lib.modules import wiz
     wiz.skinswap()
     FRESHSTART()
@@ -317,7 +317,7 @@ elif action == 'install_build':
     wiz.buildInstaller(url)
 
 elif action == 'speedtest':
-    xbmc.executebuiltin('Runscript("special://home/addons/script.ezmaintenanceplus/resources/lib/modules/speedtest.py")')
+    xbmc.executebuiltin('Runscript("special://home/addons/script.setup/resources/lib/modules/speedtest.py")')
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
