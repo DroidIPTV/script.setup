@@ -33,8 +33,8 @@ dp           = xbmcgui.DialogProgress()
 dialog       = xbmcgui.Dialog()
 addonInfo    = xbmcaddon.Addon().getAddonInfo
 
-AddonTitle="EZ Maintenance+"
-AddonID ='script.ezmaintenanceplus'
+AddonTitle="KOVI Setup"
+AddonID ='script.setup'
 
 
 def xml_data_advSettings_old(size):
