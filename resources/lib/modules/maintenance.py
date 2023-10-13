@@ -22,7 +22,7 @@ mediaPath = os.path.join(addonPath, 'media')
 databasePath = translatePath('special://database')
 THUMBS    =  translatePath(os.path.join('special://home/userdata/Thumbnails',''))
 
-addon_id = 'script.ezmaintenanceplus'
+addon_id = 'script.kovi'
 fanart = translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 iconpath = translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
 class cacheEntry:
