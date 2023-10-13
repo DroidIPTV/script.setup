@@ -14,7 +14,7 @@ else:
     translatePath = xbmcvfs.translatePath
     loglevel = xbmc.LOGINFO
 
-AddonID ='script.ezmaintenanceplus'
+AddonID ='script.setup'
 packagesdir    =  translatePath(os.path.join('special://home/addons/packages',''))
 thumbnails    =  translatePath('special://home/userdata/Thumbnails')
 dialog = xbmcgui.Dialog()
