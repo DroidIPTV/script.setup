@@ -88,7 +88,7 @@ skinPath = translatePath('special://skin/')
 
 addonPath = translatePath(addonInfo('path'))
 
-AddonID = 'script.ezmaintenanceplus'
+AddonID = 'script.setup'
 artPath = translatePath(os.path.join('special://home/addons/' + AddonID, 'art'))
 # DIRECTORIES
 backupdir        =  translatePath(os.path.join('special://home/backupdir',''))
