@@ -34,8 +34,8 @@ dp           = xbmcgui.DialogProgress()
 dialog       = xbmcgui.Dialog()
 addonInfo    = xbmcaddon.Addon().getAddonInfo
 
-AddonTitle="EZ Maintenance+"
-AddonID ='script.ezmaintenanceplus'
+AddonTitle="KOVI Setup"
+AddonID ='script.setup'
 
 
 def get_Kodi_Version():
@@ -96,11 +96,11 @@ def skinswap():
     from resources.lib.modules import skinSwitch
 
     #SWITCH THE SKIN IF THE CURRENT SKIN IS NOT CONFLUENCE
-    if skin not in ['skin.confluence','skin.estuary']:
+    if skin not in ['skin.kovi','skin.estuary']:
         choice = xbmcgui.Dialog().yesno(AddonTitle, 'We can try to reset to the default Kodi Skin...' + '\n' + 'Do you want to Proceed?', yeslabel='Yes',nolabel='No')
         if choice == 1:
 
-            skin = 'skin.estuary' if KODIV >= 17 else 'skin.confluence'
+            skin = 'skin.kovi' if KODIV >= 17 else 'skin.confluence'
             skinSwitch.swapSkins(skin)
             skinswapped = 1
             time.sleep(1)
@@ -125,7 +125,7 @@ def skinswap():
     skin         =  xbmc.getSkinDir()
 
     #CHECK IF THE SKIN IS NOT CONFLUENCE
-    if skin not in ['skin.confluence','skin.estuary']:
+    if skin not in ['skin.kovi','skin.estuary']:
         choice = xbmcgui.Dialog().yesno(AddonTitle, '[COLOR lightskyblue][B]ERROR: AUTOSWITCH WAS NOT SUCCESFULL[/B][/COLOR]' + '\n' + '[COLOR lightskyblue][B]CLICK YES TO MANUALLY SWITCH TO CONFLUENCE NOW[/B][/COLOR]' + '\n' + '[COLOR lightskyblue][B]YOU CAN PRESS NO AND ATTEMPT THE AUTO SWITCH AGAIN IF YOU WISH[/B][/COLOR]', yeslabel='[B][COLOR green]YES[/COLOR][/B]',nolabel='[B][COLOR lightskyblue]NO[/COLOR][/B]')
         if choice == 1:
             xbmc.executebuiltin("ActivateWindow(appearancesettings)")
